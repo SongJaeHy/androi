@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:columnCount="4"
+    android:rowCount="3">
+    <!-- 3*4 형태의 격자 구역 설정
+    가로나 세로방향으로 여러칸을 점유시킬 수 있음음-->
+
+
+
+</GridLayout>
