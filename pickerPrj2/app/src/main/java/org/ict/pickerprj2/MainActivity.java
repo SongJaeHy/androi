@@ -10,6 +10,8 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     // 창 부품 선언
@@ -17,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
     DatePicker dt1;
     Button btn1, btn2;
     TextView tv1, tv2;
-
-    Integer year, month, day;
-    int hour, minute;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 int hour = tb1.getHour();
                 int min = tb1.getMinute();
 
-                tv1.setText(year + "년/" + month + "월/" + day + "일/" +hour + "시/" + minute + "분");
+                tv1.setText(year + "년/" + month + "월/" + day + "일/" +hour + "시/" + min + "분");
 
                 // 2. btn2와 tv2를 활성화상태로 만들고, btn1은 못 쓰게 만들어야함.
                btn2.setEnabled(true);
@@ -59,16 +59,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 현재 시간 얻어오기
-                
+                long now = System.currentTimeMillis();
+                Date date = new Date(now);
 
-                // 1. 시간을 얻어서 tv2에 출력해줍니다.(연월일시분)
+                // 1. 시간을 얻어서 dt1, tb1에 갱신
+                dt1.updateDate((date.getYear()+1900), (date.getMonth()), date.getDate());
+                tb1.setHour(date.getMonth());
+                tb1.setMinute(date.getMinutes());
+                Log.d("연", (1900+date.getYear())+"");
+                Log.d("월", date.getMonth()+"");
+                Log.d("일", date.getDate()+"");
+
+                Log.d("시간", date.getHours()+"");
+                Log.d("분", date.getMinutes()+"");
+                // 세팅된 시간을 가져옴
                 int year = dt1.getYear();
                 int month =(dt1.getMonth()+1);
                 int day = dt1.getDayOfMonth();
                 int hour = tb1.getHour();
                 int min = tb1.getMinute();
-                dt1.updateDate(year, month, day);
-                tv2.setText(year + "년/" + month + "월/" + day + "일/" +hour + "시/" + minute + "분");
+
+                tv2.setText(year + "년/" + month + "월/" + day + "일/" +hour + "시/" + min + "분");
 
                 btn2.setEnabled(false);
 
