@@ -38,6 +38,21 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         tabhobby.setText("독서");
         tabhobby.setTabListener(this);
         bar.addTab(tabhobby);
+
+        tabSong = bar.newTab();
+        tabSong.setText("Ptt");
+        tabSong.setTabListener(this);
+        bar.addTab(tabSong);
+
+        tabArtist = bar.newTab();
+        tabArtist.setText("이달의 소녀");
+        tabArtist.setTabListener(this);
+        bar.addTab(tabArtist);
+
+        tabhobby = bar.newTab();
+        tabhobby.setText("게임");
+        tabhobby.setTabListener(this);
+        bar.addTab(tabhobby);
     }
 
     // 탭이 선택될 때 마다 바뀌는 내용을 처리해야 하므로
