@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 // androidx.fragemnet.app.Fragment를 싱속합니다.
-public class CustomTabFragment extends  androidx.fragment.app.Fragment{
+public class CustomTabFragment extends androidx.fragment.app.Fragment{
     // 탭 이름을 감지해 어떤 탭을 보여줘야 하는지 확인을 위한 변수
     String tabName;
 

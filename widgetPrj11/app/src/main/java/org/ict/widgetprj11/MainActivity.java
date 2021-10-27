@@ -14,7 +14,10 @@ import android.os.Bundle;
  */
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener{
 
-    // 탭 갯수만큼 변수 선언(3개)
+
+
+
+    //탭 갯수만큼 변수 선언(3개)
     ActionBar.Tab tabSong, tabArtist, tabhobby;
 
     @Override
@@ -38,22 +41,22 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         tabhobby.setText("독서");
         tabhobby.setTabListener(this);
         bar.addTab(tabhobby);
-
-        tabSong = bar.newTab();
-        tabSong.setText("Ptt");
-        tabSong.setTabListener(this);
-        bar.addTab(tabSong);
-
-        tabArtist = bar.newTab();
-        tabArtist.setText("이달의 소녀");
-        tabArtist.setTabListener(this);
-        bar.addTab(tabArtist);
-
-        tabhobby = bar.newTab();
-        tabhobby.setText("게임");
-        tabhobby.setTabListener(this);
-        bar.addTab(tabhobby);
     }
+//        tabSong = bar.newTab();
+//        tabSong.setText("Ptt");
+//        tabSong.setTabListener(this);
+//        bar.addTab(tabSong);
+//
+//        tabArtist = bar.newTab();
+//        tabArtist.setText("이달의 소녀");
+//        tabArtist.setTabListener(this);
+//        bar.addTab(tabArtist);
+//
+//        tabhobby = bar.newTab();
+//        tabhobby.setText("게임");
+//        tabhobby.setTabListener(this);
+//        bar.addTab(tabhobby);
+
 
     // 탭이 선택될 때 마다 바뀌는 내용을 처리해야 하므로
     // onTabSelected를 재정의해줍니다.
@@ -73,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
             customFrags[tab.getPosition()] = cFrag;
         } else {
             // 선택이 된 적이 있다면 선택된 탭으로 교체
-            cFrag = customFrags[tab.getPosition()];
+            cFrag= customFrags[tab.getPosition()];
         }
         // 화면 교체
         ft.replace(android.R.id.content, cFrag);
