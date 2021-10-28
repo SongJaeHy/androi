@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             bg1.setBackgroundColor(Color.GRAY);
         }else if(item.getItemId()== R.id.rote){
             rotation += 45;
-            backBtn.setRotation(45);
+            changeBtn.setRotation(45);
         }else if(item.getItemId()== R.id.upSize){
             changeBtn.setScaleX(2);
         }
