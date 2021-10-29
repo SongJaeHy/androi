@@ -1,4 +1,4 @@
-package org.ict.activityprj1;
+package org.ict.activityprj2;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,23 +8,21 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
-// 안드로이드에서 화면과 관련된 클래스는 모두 Activity를 상속받습니다.
-public class SecondActivity extends Activity {
+public class SubActivity2 extends Activity {
 
-    // 돌아가는 버튼
-    Button returnBtn;
+    // 버튼 선언언
+   Button returnBtn;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
-        // 연결하기
+        setContentView(R.layout.activity_sub1);
+        // 버튼 연결
         returnBtn = (Button) findViewById(R.id.returnBtn);
 
         returnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 finish();
             }
         });
