@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.Adapter rAdapter;
 
-        final String KEY = "";
+        final String KEY = "jkRtzYldraCVyF7hwoPSnX%2Bi0MxXM6pwF1cpo39v8m8LRk%2Bcf%2FhO7k0qZeMscyBqBh1kciDmT7VfQ8js%2F%2BKLmQ%3D%3D";
 
         @Override
         protected void onCreate (Bundle savedInstanceState){
