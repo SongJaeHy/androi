@@ -10,28 +10,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.ict.finprj.R;
 import org.ict.finprj.VO.Body;
-import org.ict.finprj.VO.Example;
 import org.ict.finprj.VO.Item;
 
 import java.util.List;
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
 
-    List<Body> items;
-    String item;
+    List<Item> items;
 
-    public RecycleAdapter(List<Body> items, String item){
-        this.item = item;
+    public RecycleAdapter(List<Item> items){
         this.items = items;
     }
 
-    public RecycleAdapter(String stdrYm) {
-        stdrYm = "202109";
-    }
-
-    public RecycleAdapter(List<String> columns) {
-        
-    }
 
     @NonNull
     @Override
@@ -42,7 +32,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Body item = items.get(position);
+        Item item = items.get(position);
         holder.setItem(item);
     }
 
@@ -61,9 +51,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             title = itenView.findViewById(R.id.title);
         }
 
-        public void setItem(Body item){
-            tv1.setText(item.getPageNo());
-            title.setText(item.getNumOfRows());
+        public void setItem(Item item){
+            tv1.setText(item.getBizesId());
+            title.setText(item.getBizesNm());
         }
 
     }

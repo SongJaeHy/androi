@@ -17,6 +17,7 @@ public class ListAirQualityByDistrictService {
     @Expose
     private List<Row> row = null;
 
+
     public Integer getListTotalCount() {
         return listTotalCount;
     }
@@ -40,5 +41,6 @@ public class ListAirQualityByDistrictService {
     public void setRow(List<Row> row) {
         this.row = row;
     }
+    
 
 }

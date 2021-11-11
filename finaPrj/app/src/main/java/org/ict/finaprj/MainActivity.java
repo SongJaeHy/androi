@@ -45,19 +45,11 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
-        String Service_key="jkRtzYldraCVyF7hwoPSnX%2Bi0MxXM6pwF1cpo39v8m8LRk%2Bcf%2FhO7k0qZeMscyBqBh1kciDmT7VfQ8js%2F%2BKLmQ%3D%3D";
-        String pageNo = "1";
-        String numOfRows = "10";
-        String dataType = "json";
-        String stnId = "109";
-
-       retrogitInterface.getda(ServiceKey, 1).enqueue(new Callback<Body>() {
+       retrogitInterface.getda(ServiceKey, 1,10).enqueue(new Callback<Body>() {
            @Override
            public void onResponse(Call<Body> call, Response<Body> response) {
                Body result = response.body();
-
-
-
+               
                recyclerView.setAdapter(adapter);
 
            }

@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
-        retrofitInterface.getdata(serviceKEY, 1).enqueue(new Callback<Example>() {
+        retrofitInterface.getdata("9176", "").enqueue(new Callback<Example>() {
             @Override
             public void onResponse(Call<Example> call, Response<Example> response) {
                 Example result = response.body();
 
-                adapter = new RecycleAdapter(result.getHeader().getColumns());
+                adapter = new RecycleAdapter(result.getBody().getItems());
 
                 recyclerView.setAdapter(adapter);
             }
