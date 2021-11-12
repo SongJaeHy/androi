@@ -41,21 +41,21 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tv1, title, grade;
+        private TextView tv1, title, grade, or;
 
         public ViewHolder(View apiView){
             super(apiView);
             tv1 = apiView.findViewById(R.id.tv1);
             title = apiView.findViewById(R.id.title);
             grade = apiView.findViewById(R.id.grade);
+            or = apiView.findViewById(R.id.or);
         }
 
         public void setItem(Row api){
-            tv1.setText(api.getMsrstename() + "측정소명");
-            title.setText(api.getMaxindex()+"환경지수");
-            grade.setText(api.getGrade() + "등급");
+            tv1.setText("측정소 : " + api.getMsrstename());
+            title.setText("환경 지수 :" + api.getMaxindex());
+            grade.setText("등급 : " + api.getGrade());
+            or.setText("오존:" + api.getOzone());
         }
     }
-
-
 }

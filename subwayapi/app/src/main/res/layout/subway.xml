@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tool="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool = "http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#D160D1"
         android:layout_margin="20dp"
         app:cardElevation="20dp">
 
@@ -23,9 +23,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv1"
-                    android:text="측정소"
-                    android:textSize="20dp">
+                    android:text="사용일자"
+                    android:id="@+id/t1">
                 </TextView>
             </LinearLayout>
             <LinearLayout
@@ -36,22 +35,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/title"
-                    android:hint="통합대기환경지수">
-                </TextView>
+                    android:text="호선명"
+                    android:id="@+id/mug" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/grade"
-                    android:text="환경 등급">
-                </TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/or"
-                    android:text="오존">
-                </TextView>
+                    android:text="역명"
+                    android:id="@+id/up"/>
+
+
             </LinearLayout>
+
         </LinearLayout>
+
+
     </androidx.cardview.widget.CardView>
+
 </LinearLayout>
