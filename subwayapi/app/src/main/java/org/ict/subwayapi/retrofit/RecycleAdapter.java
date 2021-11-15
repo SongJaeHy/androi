@@ -42,19 +42,19 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView t1, mug, up;
+        private TextView mug, up, ride;
 
         public ViewHolder(View suView){
             super(suView);
-            t1 = suView.findViewById(R.id.t1);
             mug = suView.findViewById(R.id.mug);
             up = suView.findViewById(R.id.up);
+            ride = suView.findViewById(R.id.ride);
         }
 
         public void setItem(Row subway){
-            t1.setText(subway.getUseDt());
-            mug.setText(subway.getLineNum());
-            up.setText(subway.getSubStaNm());
+            mug.setText("호선명:"+subway.getLineNum());
+            up.setText("역:"+subway.getSubStaNm());
+            ride.setText(subway.getWorkDt());
         }
 
     }

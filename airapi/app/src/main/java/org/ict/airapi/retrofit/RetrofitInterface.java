@@ -9,7 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface RetrofitInterface {
-    @GET("http://openapi.seoul.go.kr:8088/69414f566f7165743731565770624c/json/ListAirQualityByDistrictService/1/5/")
+    @GET("http://openapi.seoul.go.kr:8088//json/ListAirQualityByDistrictService/1/10/")
 
     Call<Example> getair(@Query("key") String key, @Query("Type") String Type,
                          @Query("Service") String Service, @Query("Start_Index") Integer Start_Index,

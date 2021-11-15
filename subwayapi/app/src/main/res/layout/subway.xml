@@ -23,26 +23,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="사용일자"
-                    android:id="@+id/t1">
-                </TextView>
+                    android:text="호선명"
+                    android:id="@+id/mug" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="호선명"
-                    android:id="@+id/mug" />
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="역명"
                     android:id="@+id/up"/>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="승차승객"
+                    android:id="@+id/ride"/>
 
             </LinearLayout>
 

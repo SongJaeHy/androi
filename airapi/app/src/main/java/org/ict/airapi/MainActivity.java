@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     // 리사이클러 어댑터 부품 선언
     RecyclerView.Adapter rAdapter;
     // 상수로 본인 key값을 저장합니다.
-    final String KEY = "69414f566f7165743731565770624c";
+    final String KEY = "서울 열린데이터 광장 키";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

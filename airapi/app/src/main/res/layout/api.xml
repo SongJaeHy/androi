@@ -51,6 +51,12 @@
                     android:id="@+id/or"
                     android:text="오존">
                 </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pm"
+                    android:text="미세먼지">
+                </TextView>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -41,7 +41,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tv1, title, grade, or;
+        private TextView tv1, title, grade, or, pm;
 
         public ViewHolder(View apiView){
             super(apiView);
@@ -49,6 +49,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             title = apiView.findViewById(R.id.title);
             grade = apiView.findViewById(R.id.grade);
             or = apiView.findViewById(R.id.or);
+            pm = apiView.findViewById(R.id.pm);
         }
 
         public void setItem(Row api){
@@ -56,6 +57,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             title.setText("환경 지수 :" + api.getMaxindex());
             grade.setText("등급 : " + api.getGrade());
             or.setText("오존:" + api.getOzone());
+            pm.setText("미세먼지 : " + api.getPm10());
         }
     }
 }

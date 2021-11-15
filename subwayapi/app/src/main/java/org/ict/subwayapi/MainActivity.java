@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView.Adapter sAdapter;
 
-    final String KEY = "";
+    final String KEY = "7a57646b5971657438326c68515744";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
